@@ -1,0 +1,7 @@
+fastapi==0.95.2
+uvicorn==0.22.0
+torch==2.4.0
+transformers
+librosa
+python-dotenv==1.0.0
+openai-whisper==2024.7.29
