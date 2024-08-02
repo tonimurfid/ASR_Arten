@@ -1,3 +1,5 @@
+Sure, here's the updated README with the MIT license included:
+
 # Whisper API Server
 
 This project sets up a simple FastAPI server to provide an API for transcribing audio files using OpenAI's Whisper model, integrated with CUDA. It allows users to upload audio files through an API endpoint, which are then processed by Whisper to return transcriptions.
@@ -50,6 +52,10 @@ To transcribe an audio file, refer to the Jupyter notebook provided with the pro
 ```bash
 test.ipynb
 ```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
