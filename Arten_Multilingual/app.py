@@ -9,7 +9,7 @@ import whisper
 import librosa
 
 # Load environment variables from .env file
-load_dotenv('../API.env')
+load_dotenv('API.env')
 
 app = FastAPI()
 
@@ -28,6 +28,7 @@ indo_pipeline = pipeline(model="tonimurfid/whisper-small-id", device=0 if device
 
 # Retrieve the API key from environment variables
 API_KEY = os.getenv('API_KEY')
+print(API_KEY)
 
 def authenticate_api_key(x_api_key: str):
     if x_api_key and x_api_key == API_KEY:
