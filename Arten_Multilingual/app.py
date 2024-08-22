@@ -94,6 +94,7 @@ async def transcribe_audio_indo(file: UploadFile = File(...), x_api_key: str = H
 
     # Load the audio file
     audio, sr = librosa.load(filepath, sr=16000)
+    print(audio)
 
     # Use the pipeline to transcribe the audio
     transcription = indo_pipeline(audio)["text"]
