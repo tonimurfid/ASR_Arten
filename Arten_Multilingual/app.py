@@ -24,7 +24,7 @@ indo_model = WhisperForConditionalGeneration.from_pretrained("tonimurfid/whisper
 indo_processor = WhisperProcessor.from_pretrained("tonimurfid/whisper-small-id")
 
 # Set up the pipeline as in Gradio
-indo_pipeline = pipeline(model="tonimurfid/whisper-small-id", device=0 if device == 'cuda' else -1)
+indo_pipeline = pipeline(model="tonimurfid/whisper-small-id", device=device)
 
 # Retrieve the API key from environment variables
 API_KEY = os.getenv('API_KEY')
@@ -94,7 +94,6 @@ async def transcribe_audio_indo(file: UploadFile = File(...), x_api_key: str = H
 
     # Load the audio file
     audio, sr = librosa.load(filepath, sr=16000)
-    print(audio)
 
     # Use the pipeline to transcribe the audio
     transcription = indo_pipeline(audio)["text"]
