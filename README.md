@@ -12,6 +12,7 @@ This project provides an API for transcribing audio files using OpenAI's Whisper
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
+- [References](#references)
 
 ## Overview
 
@@ -109,3 +110,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## Contact
 
 For any questions or feedback, please reach out via email: [fatonimurfids@gmail.com](mailto:fatonimurfids@gmail.com).
+
+## References
+
+- This project has drawn inspiration from [Saurav Panda's Whisper Service](https://github.com/sauravpanda/whisper-service).
