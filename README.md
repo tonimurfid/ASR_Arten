@@ -1,62 +1,111 @@
-Sure, here's the updated README with the MIT license included:
+# Whisper API Server with FastAPI and CUDA Integration
 
-# Whisper API Server
+This project provides an API for transcribing audio files using OpenAI's Whisper model, integrated with CUDA for optimized performance. The server is built with FastAPI, offering a user-friendly and efficient way to process audio files via API endpoints.
 
-This project sets up a simple FastAPI server to provide an API for transcribing audio files using OpenAI's Whisper model, integrated with CUDA. It allows users to upload audio files through an API endpoint, which are then processed by Whisper to return transcriptions.
+## Table of Contents
+
+- [Overview](#overview)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the Server](#running-the-server)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Overview
+
+The Whisper API Server allows users to upload audio files, which are then transcribed using OpenAI's Whisper model. This server is particularly suited for projects requiring scalable and fast audio transcription, taking advantage of CUDA for accelerated computation.
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before setting up the server, ensure you have the following installed:
 
-- Python 3.7 or higher and below 3.10 (recommended: Python 3.8)
-- Pip (Python package manager)
-- FFmpeg (for audio processing)
+- **Python 3.7 - 3.9** (Python 3.8 is recommended for optimal compatibility)
+- **Pip** (Python package manager)
+- **FFmpeg** (Required for audio processing)
 
 ## Installation
 
-To install the necessary dependencies for this project, follow these steps:
+### Step 1: Clone the Repository
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/tonimurfid/ASR_Arten.git
-   cd Arten_Multilingual
-   ```
+Begin by cloning the project repository to your local machine:
 
-2. Install the required Python packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/tonimurfid/ASR_Arten.git
+cd Arten_Multilingual
+```
 
-   This will install FastAPI and Whisper.
+### Step 2: Install Python Dependencies
 
-3. Make sure `ffmpeg` is installed on your system:
-   - For Ubuntu/Debian: `sudo apt-get install ffmpeg`
-   - For Fedora: `sudo dnf install ffmpeg`
-   - For macOS (with Homebrew): `brew install ffmpeg`
-   - For Windows, download and install from [FFmpeg's official site](https://ffmpeg.org/download.html).
+Install the necessary Python packages by executing:
+
+```bash
+pip install -r requirements.txt
+```
+
+This command will install all the required dependencies, including FastAPI and Whisper.
+
+### Step 3: Install FFmpeg
+
+Ensure `ffmpeg` is installed on your system, as it is essential for handling audio files:
+
+- **Ubuntu/Debian:** 
+  ```bash
+  sudo apt-get install ffmpeg
+  ```
+- **Fedora:** 
+  ```bash
+  sudo dnf install ffmpeg
+  ```
+- **macOS (with Homebrew):** 
+  ```bash
+  brew install ffmpeg
+  ```
+- **Windows:** Download and install from [FFmpeg's official site](https://ffmpeg.org/download.html).
 
 ## Running the Server
 
-To run the server, execute:
+To start the server, simply run:
 
 ```bash
 python app.py
 ```
 
-This will start the FastAPI server on `http://localhost:8000`.
+This command will launch the FastAPI server, which will be accessible at `http://localhost:8000`.
 
 ## Usage
 
-To transcribe an audio file, refer to the Jupyter notebook provided with the project:
+To transcribe audio files using the Whisper API Server, you can either interact directly with the provided FastAPI endpoints or refer to the Jupyter notebook included in the repository for examples and usage:
 
-```bash
-test.ipynb
-```
+- **Notebook:** 
+  ```bash
+  test.ipynb
+  ```
+
+## Contributing
+
+Contributions are welcome! To contribute to this project, follow these steps:
+
+1. **Fork the Repository.**
+2. **Create a New Branch:** 
+   ```bash
+   git checkout -b feature-branch
+   ```
+3. **Make Your Changes and Commit:** 
+   ```bash
+   git commit -am 'Add some feature'
+   ```
+4. **Push to the Branch:** 
+   ```bash
+   git push origin feature-branch
+   ```
+5. **Create a New Pull Request.**
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## Contact
 
-For any queries, please contact: fatonimurfids@gmail.com
+For any questions or feedback, please reach out via email: [fatonimurfids@gmail.com](mailto:fatonimurfids@gmail.com).
