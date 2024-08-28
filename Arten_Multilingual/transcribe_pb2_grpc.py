@@ -3,8 +3,6 @@
 import grpc
 import warnings
 
-from proto import transcribe_pb2 as proto_dot_transcribe__pb2
-
 GRPC_GENERATED_VERSION = '1.66.0'
 GRPC_VERSION = grpc.__version__
 _version_not_supported = False
@@ -18,7 +16,7 @@ except ImportError:
 if _version_not_supported:
     raise RuntimeError(
         f'The grpc package installed is at version {GRPC_VERSION},'
-        + f' but the generated code in proto/transcribe_pb2_grpc.py depends on'
+        + f' but the generated code in transcribe_pb2_grpc.py depends on'
         + f' grpcio>={GRPC_GENERATED_VERSION}.'
         + f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'
         + f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'
@@ -36,8 +34,8 @@ class EnglishTranscriptionServiceStub(object):
         """
         self.TranscribeAudio = channel.unary_unary(
                 '/transcription.EnglishTranscriptionService/TranscribeAudio',
-                request_serializer=proto_dot_transcribe__pb2.TranscriptionRequest.SerializeToString,
-                response_deserializer=proto_dot_transcribe__pb2.TranscriptionResponse.FromString,
+                request_serializer=transcribe__pb2.TranscriptionRequest.SerializeToString,
+                response_deserializer=transcribe__pb2.TranscriptionResponse.FromString,
                 _registered_method=True)
 
 
@@ -55,8 +53,8 @@ def add_EnglishTranscriptionServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'TranscribeAudio': grpc.unary_unary_rpc_method_handler(
                     servicer.TranscribeAudio,
-                    request_deserializer=proto_dot_transcribe__pb2.TranscriptionRequest.FromString,
-                    response_serializer=proto_dot_transcribe__pb2.TranscriptionResponse.SerializeToString,
+                    request_deserializer=transcribe__pb2.TranscriptionRequest.FromString,
+                    response_serializer=transcribe__pb2.TranscriptionResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -84,8 +82,8 @@ class EnglishTranscriptionService(object):
             request,
             target,
             '/transcription.EnglishTranscriptionService/TranscribeAudio',
-            proto_dot_transcribe__pb2.TranscriptionRequest.SerializeToString,
-            proto_dot_transcribe__pb2.TranscriptionResponse.FromString,
+            transcribe__pb2.TranscriptionRequest.SerializeToString,
+            transcribe__pb2.TranscriptionResponse.FromString,
             options,
             channel_credentials,
             insecure,
@@ -108,8 +106,8 @@ class IndonesianTranscriptionServiceStub(object):
         """
         self.TranscribeAudio = channel.unary_unary(
                 '/transcription.IndonesianTranscriptionService/TranscribeAudio',
-                request_serializer=proto_dot_transcribe__pb2.TranscriptionRequest.SerializeToString,
-                response_deserializer=proto_dot_transcribe__pb2.TranscriptionResponse.FromString,
+                request_serializer=transcribe__pb2.TranscriptionRequest.SerializeToString,
+                response_deserializer=transcribe__pb2.TranscriptionResponse.FromString,
                 _registered_method=True)
 
 
@@ -127,8 +125,8 @@ def add_IndonesianTranscriptionServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'TranscribeAudio': grpc.unary_unary_rpc_method_handler(
                     servicer.TranscribeAudio,
-                    request_deserializer=proto_dot_transcribe__pb2.TranscriptionRequest.FromString,
-                    response_serializer=proto_dot_transcribe__pb2.TranscriptionResponse.SerializeToString,
+                    request_deserializer=transcribe__pb2.TranscriptionRequest.FromString,
+                    response_serializer=transcribe__pb2.TranscriptionResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -156,8 +154,8 @@ class IndonesianTranscriptionService(object):
             request,
             target,
             '/transcription.IndonesianTranscriptionService/TranscribeAudio',
-            proto_dot_transcribe__pb2.TranscriptionRequest.SerializeToString,
-            proto_dot_transcribe__pb2.TranscriptionResponse.FromString,
+            transcribe__pb2.TranscriptionRequest.SerializeToString,
+            transcribe__pb2.TranscriptionResponse.FromString,
             options,
             channel_credentials,
             insecure,
