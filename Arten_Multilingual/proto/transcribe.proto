@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "model/transcribe";
+
+package transcription;
+
+message TranscriptionRequest {
+    bytes file_data = 1;
+}
+
+message TranscriptionResponse {
+    string transcription_message = 1;
+}
+
+service EnglishTranscriptionService {
+    rpc TranscribeAudio (TranscriptionRequest) returns (TranscriptionResponse);
+}
+
+service IndonesianTranscriptionService {
+    rpc TranscribeAudio (TranscriptionRequest) returns (TranscriptionResponse);
+}
